@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Photo with back -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/resultImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#66000000" />
+
+            <TextView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="←"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:clickable="true"
+                android:focusable="true" />
+        </FrameLayout>
+
+        <!-- Uncertain band -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="14dp"
+            android:text="Not sure about this one"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@color/status_warn" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:text="Confidence was too low to give a safe diagnosis. Try again with a clearer photo, or consult an extension officer."
+            android:textColor="@color/ink_soft"
+            android:textSize="15sp"
+            android:lineSpacingExtra="4dp" />
+
+        <!-- Tips -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="TIPS FOR A BETTER PHOTO"
+            android:textColor="@color/leaf_mid"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1" />
+
+        <LinearLayout
+            android:id="@+id/tipsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="12dp" />
+
+        <!-- Retake button -->
+        <TextView
+            android:id="@+id/btnRetake"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:background="@drawable/btn_primary"
+            android:gravity="center"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:text="Retake Photo"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+</ScrollView>

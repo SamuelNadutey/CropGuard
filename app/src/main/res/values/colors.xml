@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Core palette: leaf greens + laterite earth + bone -->
+    <color name="leaf_deep">#1F3D2B</color>      <!-- deep canopy green, primary -->
+    <color name="leaf_mid">#3A6B47</color>       <!-- mid leaf green -->
+    <color name="leaf_soft">#6B9377</color>      <!-- muted sage -->
+    <color name="clay">#B5532A</color>           <!-- laterite clay, accent -->
+    <color name="clay_soft">#D98E6A</color>      <!-- soft clay -->
+    <color name="bone">#F4EFE6</color>           <!-- warm bone background -->
+    <color name="bone_card">#FBF8F2</color>      <!-- card surface -->
+    <color name="ink">#1A1A17</color>            <!-- near-black text -->
+    <color name="ink_soft">#5C5C54</color>       <!-- secondary text -->
+
+    <!-- Semantic result colors -->
+    <color name="status_healthy">#2E7D4F</color>
+    <color name="status_warn">#C8881F</color>
+    <color name="status_alert">#B5532A</color>
+
+    <color name="white">#FFFFFF</color>
+</resources>

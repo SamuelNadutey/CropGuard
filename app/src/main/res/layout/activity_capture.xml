@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bone"
+    android:padding="24dp">
+
+    <!-- Top bar: back + crop name -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="←"
+            android:textColor="@color/leaf_deep"
+            android:textSize="26sp"
+            android:paddingEnd="16dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DIAGNOSING"
+                android:textColor="@color/leaf_mid"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.12" />
+            <TextView
+                android:id="@+id/cropLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crop"
+                android:textColor="@color/ink"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Image preview area -->
+    <ImageView
+        android:id="@+id/imagePreview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/preview_bg"
+        android:scaleType="centerCrop"
+        android:clipToOutline="true" />
+
+    <!-- Helper tip -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Fill the frame with one affected leaf"
+        android:textColor="@color/ink_soft"
+        android:textSize="13sp" />
+
+    <!-- Take Photo -->
+    <TextView
+        android:id="@+id/btnCamera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_primary"
+        android:gravity="center"
+        android:paddingTop="18dp"
+        android:paddingBottom="18dp"
+        android:text="Take Photo"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- Choose from Gallery -->
+    <TextView
+        android:id="@+id/btnGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/btn_secondary"
+        android:gravity="center"
+        android:paddingTop="18dp"
+        android:paddingBottom="18dp"
+        android:text="Choose from Gallery"
+        android:textColor="@color/leaf_deep"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:focusable="true" />
+    <!-- Analyze -->
+    <TextView
+        android:id="@+id/btnAnalyze"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/btn_analyze"
+        android:gravity="center"
+        android:paddingTop="18dp"
+        android:paddingBottom="18dp"
+        android:text="Analyze"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:alpha="0.4"
+        android:clickable="true"
+        android:focusable="true" />
+
+</LinearLayout>

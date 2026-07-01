@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Photo with back button overlay -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp">
+
+            <ImageView
+                android:id="@+id/resultImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/heatmapOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:alpha="0.55"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#33000000" />
+
+            <TextView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="←"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:clickable="true"
+                android:focusable="true" />
+        </FrameLayout>
+
+        <!-- Severity band -->
+        <TextView
+            android:id="@+id/severityBand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="14dp"
+            android:text="Act Soon — treatment recommended"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:background="@color/status_warn" />
+
+        <!-- Diagnosis header: confidence + name -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/confidenceCircle"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:text="92%"
+                android:textColor="@color/leaf_deep"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:background="@drawable/confidence_ring" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="18dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/cropTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MAIZE"
+                    android:textColor="@color/leaf_mid"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1" />
+
+                <TextView
+                    android:id="@+id/diagnosisName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Maize Leaf Blight"
+                    android:textColor="@color/ink"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- What it is -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="WHAT IT IS"
+            android:textColor="@color/leaf_mid"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1" />
+
+        <TextView
+            android:id="@+id/whatItIs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textColor="@color/ink_soft"
+            android:textSize="15sp"
+            android:lineSpacingExtra="4dp" />
+
+        <!-- What to do -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="WHAT TO DO"
+            android:textColor="@color/leaf_mid"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1" />
+
+        <LinearLayout
+            android:id="@+id/stepsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Treatment -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="TREATMENT"
+            android:textColor="@color/leaf_mid"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1" />
+
+        <TextView
+            android:id="@+id/treatmentText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/treatment_box"
+            android:padding="16dp"
+            android:text=""
+            android:textColor="@color/ink"
+            android:textSize="15sp"
+            android:lineSpacingExtra="4dp" />
+
+        <TextView
+            android:id="@+id/btnExplain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/btn_secondary"
+            android:gravity="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:text="Why this diagnosis?"
+            android:textColor="@color/leaf_deep"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/explainStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/ink_soft"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/authorityText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="28dp"
+            android:text=""
+            android:textColor="@color/leaf_soft"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</ScrollView>
